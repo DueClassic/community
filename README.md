@@ -13,6 +13,7 @@
 
 
 ## 工具
+[flyway数据库管理](https://flywaydb.org/getstarted/firststeps/maven)
 
 ## 脚本
 
@@ -26,4 +27,8 @@ CREATE TABLE USER
     GMT_CREATE bigint,
     GMT_MODIFIED bigint
 );
+```
+```bash
+#更新数据库
+mvn flyway:migrate
 ```
