@@ -9,6 +9,15 @@ public class AccessTokenDTO {
     private String code;
     private String redirect_uri;
     private String state;
+    private String bio;
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     public String getClient_id() {
         return client_id;

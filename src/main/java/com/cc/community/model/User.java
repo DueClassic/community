@@ -10,6 +10,28 @@ public class User {
     private String token;
     private Long gmtCreate;
     private Long gmtModified;
+    private String bio;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", accountId='" + accountId + '\'' +
+                ", token='" + token + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", bio='" + bio + '\'' +
+                '}';
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
 
     public Integer getId() {
         return id;

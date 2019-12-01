@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -36,7 +35,6 @@ public class AuthorizeController {
     @GetMapping("/callback")
     public String callback(@RequestParam(name="code")String code,
                            @RequestParam(name = "state")String state,
-                           HttpServletRequest request,
                            HttpServletResponse response){
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
 
@@ -48,14 +46,15 @@ public class AuthorizeController {
 
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser=githubProvider.getUser(accessToken);
-
+        User user=new User();
         if(githubUser!=null){
             //登录前做校验，看是否存在该用户
             Long githubUserId = githubUser.getId();
-            User user=new User();
-            if((user=userMapper.findByGithubUserId(githubUserId))!=null){
-                String token=user.getToken();
-                response.addCookie(new Cookie("token",token));
+
+            if((userMapper.findByGithubUserId(githubUserId))!=null) {
+                user=userMapper.findByGithubUserId(githubUserId);
+                String token = user.getToken();
+                response.addCookie(new Cookie("token", token));
                 return "redirect:/";
             }
             //登录成功
@@ -65,6 +64,7 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
+            user.setBio(githubUser.getBio());
             userMapper.insert(user);
             response.addCookie(new Cookie("token",token));
             //重定向
