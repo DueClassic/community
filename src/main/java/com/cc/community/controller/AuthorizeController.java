@@ -50,8 +50,15 @@ public class AuthorizeController {
         GithubUser githubUser=githubProvider.getUser(accessToken);
 
         if(githubUser!=null){
-            //登录成功
+            //登录前做校验，看是否存在该用户
+            Long githubUserId = githubUser.getId();
             User user=new User();
+            if((user=userMapper.findByGithubUserId(githubUserId))!=null){
+                String token=user.getToken();
+                response.addCookie(new Cookie("token",token));
+                return "redirect:/";
+            }
+            //登录成功
             String token = UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(githubUser.getName());

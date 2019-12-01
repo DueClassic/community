@@ -16,4 +16,6 @@ public interface UserMapper {
     void insert(User user);
     @Select("select * from user where token=#{token}")
     User findByToken(String token);
+    @Select("select * from user where account_id=#{githubUserId}")
+    User findByGithubUserId(Long githubUserId);
 }
