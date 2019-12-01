@@ -47,10 +47,9 @@ public class AuthorizeController {
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser=githubProvider.getUser(accessToken);
         User user=new User();
-        if(githubUser!=null){
+        if(githubUser!=null&&githubUser.getId()!=null){
             //登录前做校验，看是否存在该用户
             Long githubUserId = githubUser.getId();
-
             if((userMapper.findByGithubUserId(githubUserId))!=null) {
                 user=userMapper.findByGithubUserId(githubUserId);
                 String token = user.getToken();
