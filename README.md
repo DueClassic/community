@@ -1,4 +1,4 @@
-#提问社区
+# 提问社区
 
 ## 资料
 [Spring 文档](https://spring.io/guides/)
@@ -14,7 +14,7 @@
 
 ## 工具
 
-##脚本
+## 脚本
 
 ```sql
 CREATE TABLE USER
