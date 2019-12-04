@@ -5,6 +5,7 @@ import com.cc.community.dto.GithubUser;
 import com.cc.community.mapper.UserMapper;
 import com.cc.community.model.User;
 import com.cc.community.provider.GithubProvider;
+import com.cc.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
@@ -30,7 +32,7 @@ public class AuthorizeController {
     @Value("${github.redirect.uri}")
     private String redirectUri;
     @Autowired
-    private UserMapper userMapper;
+    private UserService userService;
 
     @GetMapping("/callback")
     public String callback(@RequestParam(name="code")String code,
@@ -48,24 +50,9 @@ public class AuthorizeController {
         GithubUser githubUser=githubProvider.getUser(accessToken);
         User user=new User();
         if(githubUser!=null&&githubUser.getId()!=null){
-            //登录前做校验，看是否存在该用户
-            Long githubUserId = githubUser.getId();
-            if((userMapper.findByGithubUserId(githubUserId))!=null) {
-                user=userMapper.findByGithubUserId(githubUserId);
-                String token = user.getToken();
-                response.addCookie(new Cookie("token", token));
-                return "redirect:/";
-            }
             //登录成功
             String token = UUID.randomUUID().toString();
-            user.setToken(token);
-            user.setName(githubUser.getName());
-            user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setGmtCreate(System.currentTimeMillis());
-            user.setGmtModified(user.getGmtCreate());
-            user.setBio(githubUser.getBio());
-            user.setAvatarUrl(githubUser.getAvatar_url());
-            userMapper.insert(user);
+            userService.createOrUpdate(githubUser,token);
             response.addCookie(new Cookie("token",token));
             //重定向
             return "redirect:/";
@@ -73,5 +60,14 @@ public class AuthorizeController {
             //登录失败
             return "redirect:/";
         }
+    }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response
+                         ){
+        request.getSession().removeAttribute("user");
+        Cookie cookie=new Cookie("token",null);
+        response.addCookie(cookie);
+        return  "redirect:/";
     }
 }

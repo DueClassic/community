@@ -1,5 +1,5 @@
 body{
-    background-color: #d3d3d3;
+    background-color: #e8e8e8;
 }
 .main{
     margin: 30px;
@@ -17,4 +17,38 @@ body{
     font-size: 12px;
     font-weight: normal;
     color: #999;
+}
+.error-size{
+    width: auto;
+    height: 42px;
+    margin-bottom: 20px;
+    float: left;
+    font-size: 22px;
+    padding: 6px 7px;
+    text-align: center;
+    vertical-align: middle;
+}
+.text-search{
+    height: 39px;
+}
+.btn-success {
+    border: none !important;
+    background-color: #5bbf5a;
+    color: #fff;
+}
+.profile .section{
+    margin-top: 15px;
+}
+.question .section{
+    margin-top: 15px;
+}
+.community-edit{
+    color: #999;
+    font-size: 12px;
+}
+.media-user-name{
+    margin-top: 18px;
+    margin-bottom: 5px;
+    padding-left: 13px;
+    font-size: 30px;
 }
