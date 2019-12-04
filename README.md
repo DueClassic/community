@@ -36,5 +36,7 @@ CREATE TABLE USER
 ```bash
 #更新数据库
 mvn flyway:migrate
+#mybatis Generator自动生成
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
 >>>>>>> 0f68ef30eb017018c68f0f42a88530e25a076d3e
