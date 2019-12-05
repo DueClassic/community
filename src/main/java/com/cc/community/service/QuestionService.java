@@ -4,6 +4,7 @@ import com.cc.community.dto.PageDTO;
 import com.cc.community.dto.QuestionDTO;
 import com.cc.community.exception.CustomizeErrorCode;
 import com.cc.community.exception.CustomizeException;
+import com.cc.community.mapper.QuestionExtMapper;
 import com.cc.community.mapper.QuestionMapper;
 import com.cc.community.mapper.UserMapper;
 import com.cc.community.model.Question;
@@ -22,6 +23,8 @@ import java.util.List;
  */
 @Service
 public class QuestionService {
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
     @Autowired
      private QuestionMapper questionMapper;
     @Autowired
@@ -122,5 +125,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+    //高并发下如何更新阅读数了？
+    public void incViewer(Integer questionId) {
+        Question updateQuestion=new Question();
+        updateQuestion.setId(questionId);
+        updateQuestion.setViewCount(1);
+        questionExtMapper.incViewer(updateQuestion);
     }
 }
