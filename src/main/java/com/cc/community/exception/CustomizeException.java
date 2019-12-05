@@ -6,6 +6,7 @@ package com.cc.community.exception;
  */
 public class CustomizeException extends RuntimeException{
     private String message;
+    private Integer code;
 
     //构造函数,直接获取message字符串
     public CustomizeException(String message){
@@ -14,10 +15,15 @@ public class CustomizeException extends RuntimeException{
     //构造函数，从CustomizeErrorCode中取值
     public CustomizeException(ICustomizeErrorCode errorCode){
         this.message=errorCode.getMessage();
+        this.code=errorCode.getCode();
     }
 
     @Override
     public String getMessage() {
         return message;
+    }
+
+    public Integer getCode() {
+        return code;
     }
 }

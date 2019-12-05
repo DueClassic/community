@@ -20,13 +20,13 @@ public class QuestionController {
     @Autowired
     private QuestionService questionService;
     @GetMapping("/question/{id}")
-    public String question(@PathVariable(name = "id") Integer id,
+    public String question(@PathVariable(name = "id") Long id,
                            HttpServletRequest request,
                            Model model){
         QuestionDTO questionDTO=questionService.getById(id);
         //如果阅读者和发布人不一样，则增加阅读数
         User user = (User) request.getSession().getAttribute("user");
-        if (user.getId()!=questionDTO.getCreator()){
+        if (user.getId()!=(long) questionDTO.getCreator()){
             questionService.incViewer(id);
             questionDTO=questionService.getById(id);
         }

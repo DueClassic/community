@@ -62,7 +62,7 @@ public class QuestionService {
         return pageDTO;
     }
 
-    public PageDTO list(Integer userId, Integer page, Integer size) {
+    public PageDTO list(Long userId, Integer page, Integer size) {
         PageDTO pageDTO=new PageDTO();
         Integer totalPage;
 
@@ -97,7 +97,7 @@ public class QuestionService {
         return pageDTO;
     }
 
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question=questionMapper.selectByPrimaryKey(id);
         if(question==null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
@@ -114,6 +114,9 @@ public class QuestionService {
             //创建
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
+            question.setViewCount(0);
+            question.setCommentCount(0);
+            question.setLikeCount(0);
             questionMapper.insert(question);
         }else{
             //更新
@@ -126,8 +129,7 @@ public class QuestionService {
             }
         }
     }
-    //高并发下如何更新阅读数了？
-    public void incViewer(Integer questionId) {
+    public void incViewer(Long questionId) {
         Question updateQuestion=new Question();
         updateQuestion.setId(questionId);
         updateQuestion.setViewCount(1);
