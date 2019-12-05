@@ -52,3 +52,8 @@ body{
     padding-left: 13px;
     font-size: 30px;
 }
+.jumbotron{
+    margin-top: 4%;
+    margin-left: 42%;
+    background-color: #e8e8e8;
+}

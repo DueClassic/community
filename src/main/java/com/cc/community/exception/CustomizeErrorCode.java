@@ -1,6 +1,7 @@
 package com.cc.community.exception;
 
 /**
+ * 枚举类，定义异常类型
  * Created by xiaomi on 2019/12/4.
  */
 public enum CustomizeErrorCode implements ICustomizeErrorCode{

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * 处理CustomizeExceptionHandler未拦截的其他异常，进行统一化处理
  * Created by xiaomi on 2019/12/4.
  */
 @Controller
@@ -31,7 +32,6 @@ public class CustomizeErrorController implements ErrorController{
             model.addAttribute("message","服务器故障！");
         }
         return new ModelAndView("error");
-
     }
     private HttpStatus getStatus(HttpServletRequest request){
         Integer statusCode= (Integer) request.getAttribute("javax.servlet.error.status_code");
