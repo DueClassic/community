@@ -3,9 +3,11 @@ package com.cc.community.service;
 import com.cc.community.dto.GithubUser;
 import com.cc.community.mapper.UserMapper;
 import com.cc.community.model.User;
+import com.cc.community.model.UserExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -17,9 +19,12 @@ public class UserService {
     private UserMapper userMapper;
 
     public void createOrUpdate(GithubUser githubUser, String token) {
-        User user=userMapper.findByAccountId(githubUser.getId());
-        if (user==null){
+        UserExample userExample=new UserExample();
+        userExample.createCriteria().andAccountIdEqualTo(String.valueOf(githubUser.getId()));
+        List<User> users = userMapper.selectByExample(userExample);
+        if (users.size()==0){
             //注册
+            User user=new User();
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
@@ -30,12 +35,15 @@ public class UserService {
             userMapper.insert(user);
         }else {
             //更新
-            user.setBio(githubUser.getBio());
-            user.setAvatarUrl(githubUser.getAvatar_url());
-            user.setToken(token);
-            user.setName(githubUser.getName());
-            user.setGmtModified(user.getGmtCreate());
-            userMapper.update(user);
+            User updateUser=new User();
+            updateUser.setBio(githubUser.getBio());
+            updateUser.setAvatarUrl(githubUser.getAvatar_url());
+            updateUser.setToken(token);
+            updateUser.setName(githubUser.getName());
+            updateUser.setGmtModified(System.currentTimeMillis());
+            UserExample example=new UserExample();
+            example.createCriteria().andIdEqualTo(users.get(0).getId());
+            userMapper.updateByExampleSelective(updateUser,example);
         }
     }
 }

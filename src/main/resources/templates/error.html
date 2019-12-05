@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>开心社区</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/community.css" type="text/css">
+    <script src="/js/jquery-3.3.1.js" type="application/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--导航栏-->
+<div th:replace="~{navigation::nav}"></div>
+<div class="container-fluid main">
+    <div class="row " style="background-color: #e8e8e8;">
+        <div class="jumbotron">
+            <h1>出错啦！！！</h1>
+            <p th:text="${message}">服务异常</p>
+            <p><a class="btn btn-primary btn-lg" href="/" role="button">回到主页</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
