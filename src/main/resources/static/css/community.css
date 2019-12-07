@@ -10,8 +10,8 @@ body{
     margin-bottom: 20px;
 }
 .media-object{
-    height: 66px;
-    width: 66px;
+    height: 53px;
+    width: 53px;
 }
 .text-color{
     font-size: 12px;
@@ -45,15 +45,75 @@ body{
 .community-edit{
     color: #999;
     font-size: 12px;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.commentCount{
+    margin-left: 16px;
 }
 .media-user-name{
-    margin-top: 18px;
+    margin-top: 8px;
     margin-bottom: 5px;
-    padding-left: 13px;
-    font-size: 30px;
+    font-size: 23px;
 }
 .jumbotron{
     margin-top: 4%;
     margin-left: 42%;
     background-color: #e8e8e8;
+}
+.comment{
+    margin: 10px 0;
+}
+.comments{
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.btn-comment{
+    float: right;
+    margin: 10px;
+}
+.comment-cp{
+    margin-top: 0;
+}
+.menu{
+    color:#999;
+    margin-top: 5px;
+}
+.menu .icon{
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.menu .icon:hover{
+    color: #499ef3;
+}
+.menu .active{
+    color: #499ef3;
+}
+.comment_section{
+    margin-top: 25px;
+}
+.sub_comment{
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding-top: 6px;
+    margin-bottom: 11px;
+}
+.sub_comment .btn{
+    margin: 10px 0;
+}
+.sub_comment .sub_comment_reply{
+    margin-top: 18px;
+}
+.menu .icon .count{
+    margin-left: 7px;
+}
+.menu .ele{
+    display: inline;
+}
+.count{
+    padding-right: 22px;
 }
