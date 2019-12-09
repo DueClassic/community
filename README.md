@@ -11,11 +11,15 @@
 
 [Spring DataSource](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
 
+[UFile SDK](https://docs.ucloud.cn/storage_cdn/ufile/api_reference)
+
 
 ## 工具
 [flyway数据库管理](https://flywaydb.org/getstarted/firststeps/maven)
 
 [Lombok](https://projectlombok.org/)
+
+[MarkDown编辑器](https://pandao.github.io/editor.md/)
 
 ## 脚本
 
