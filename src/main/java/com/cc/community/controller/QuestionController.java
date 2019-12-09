@@ -3,6 +3,7 @@ package com.cc.community.controller;
 import com.cc.community.dto.CommentDTO;
 import com.cc.community.dto.QuestionDTO;
 import com.cc.community.enums.CommentTypeEnum;
+import com.cc.community.model.Question;
 import com.cc.community.model.User;
 import com.cc.community.service.CommentService;
 import com.cc.community.service.QuestionService;
@@ -29,6 +30,7 @@ public class QuestionController {
                            HttpServletRequest request,
                            Model model){
         QuestionDTO questionDTO=questionService.getById(id);
+        List<QuestionDTO> relatedQuestions=questionService.selectRelated(questionDTO);
         //如果阅读者和发布人不一样，则增加阅读数
         User user = (User) request.getSession().getAttribute("user");
         if (user!=null){
@@ -40,6 +42,7 @@ public class QuestionController {
         List<CommentDTO> comments=commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
         model.addAttribute("question",questionDTO);
         model.addAttribute("comments",comments);
+        model.addAttribute("relatedQuestions",relatedQuestions);
         return "question";
     }
 }

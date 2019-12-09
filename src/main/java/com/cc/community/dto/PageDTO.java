@@ -9,8 +9,8 @@ import java.util.List;
  * Created by xiaomi on 2019/12/2.
  */
 @Data
-public class PageDTO {
-    private List<QuestionDTO> questions;
+public class PageDTO<T> {
+    private List<T> data;
     private boolean showPrevious;
     private boolean showFirstPage;
     private boolean showNext;

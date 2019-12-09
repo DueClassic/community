@@ -11,7 +11,9 @@ public enum CustomizeErrorCode implements ICustomizeErrorCode{
     SYSTEM_ERR("服务器走丢了，请稍后再试！",2004),
     TYPE_PARAM_WRONG("回复类型不存在",2005 ),
     COMMENT_NOT_FOUND("回复的评论不存在了",2006 ),
-    CONTENT_ISEMPTY("输入内容不能为空",2007)
+    CONTENT_ISEMPTY("输入内容不能为空",2007),
+    READ_NOTIFICATION_FAIL("读取失败",2008),
+    NOTIFICATION_NOT_FOUND("消息消失了？",2009)
     ;
 
 

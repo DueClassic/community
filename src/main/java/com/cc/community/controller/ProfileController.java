@@ -4,6 +4,7 @@ import com.cc.community.dto.PageDTO;
 import com.cc.community.mapper.QuestionMapper;
 import com.cc.community.mapper.UserMapper;
 import com.cc.community.model.User;
+import com.cc.community.service.NotificationService;
 import com.cc.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,8 @@ import javax.servlet.http.HttpServletRequest;
 public class ProfileController {
     @Autowired
     private QuestionService questionService;
+    @Autowired
+    private NotificationService notificationService;
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action")String action,
                           HttpServletRequest request,
@@ -35,12 +38,15 @@ public class ProfileController {
         if("questions".equals(action)){
             model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的问题");
+            PageDTO pageDTO = questionService.list(user.getId(), page, size);
+            model.addAttribute("pagination",pageDTO);
         }else if("replies".equals(action)){
+            PageDTO pageDTO=notificationService.list(user.getId(),page,size);
+            Long unreadCount=notificationService.unreadCount(user.getId());
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
+            model.addAttribute("pagination",pageDTO);
         }
-        PageDTO pageDTO = questionService.list(user.getId(), page, size);
-        model.addAttribute("pagination",pageDTO);
         return "profile";
     }
 }

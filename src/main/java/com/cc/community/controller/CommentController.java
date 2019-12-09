@@ -28,8 +28,8 @@ public class CommentController {
     @RequestMapping(value = "/comment",method = RequestMethod.POST)
     public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
                        HttpServletRequest request){
-        User user1 = (User) request.getSession().getAttribute("user");
-        if (user1==null){
+        User user = (User) request.getSession().getAttribute("user");
+        if (user==null){
             return ResultDTO.errorOf(CustomizeErrorCode.NOT_LOGIN);
         }
         if (commentCreateDTO==null || StringUtils.isBlank(commentCreateDTO.getContent())){
@@ -42,8 +42,8 @@ public class CommentController {
         comment.setGmtCreate(System.currentTimeMillis());
         comment.setGmtModified(System.currentTimeMillis());
         comment.setLikeCount(0L);
-        comment.setCommentator(user1.getId());
-        commentService.insert(comment);
+        comment.setCommentator(user.getId());
+        commentService.insert(comment,user);
         return ResultDTO.okOf();
     }
 

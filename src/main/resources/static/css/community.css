@@ -42,10 +42,19 @@ body{
 .question .section{
     margin-top: 15px;
 }
+.question-related{
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 0;
+    list-style: none;
+}
+.question-title{
+    margin-bottom: 20px;
+}
 .community-edit{
     color: #999;
     font-size: 12px;
-    display: block;
+    /*display: block;*/
     margin-bottom: 20px;
     margin-left: 10px;
 }
@@ -116,4 +125,17 @@ body{
 }
 .count{
     padding-right: 22px;
+}
+.question-tag{
+    margin-right: 5px;
+}
+.publish-tag-tab{
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.publish-tag-tab .label-info{
+    white-space: normal;
+    margin: 5px 5px;
+    display: inline-block;
 }
