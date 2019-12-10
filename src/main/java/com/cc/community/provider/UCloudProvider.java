@@ -30,11 +30,11 @@ public class UCloudProvider {
     private String privateKey;
     @Value("${ucloud.ufile.bucket-name}")
     private String bucketName;
-    @Value("ucloud.ufile.region")
+    @Value("${ucloud.ufile.region}")
     private String region;
-    @Value("ucloud.ufile.suffix")
+    @Value("${ucloud.ufile.suffix}")
     private String suffix;
-    @Value("ucloud.ufile.expires")
+    @Value("${ucloud.ufile.expires}")
     private Integer expires;
 
     public String upload(InputStream fileStream,String mimeType,String fileName){
@@ -48,7 +48,6 @@ public class UCloudProvider {
         try {
             ObjectAuthorization  OBJECT_AUTHORIZER  = new UfileObjectLocalAuthorization(publicKey,privateKey);
             ObjectConfig config = new ObjectConfig(region,suffix);
-            bucketName = "";
             PutObjectResultBean response = UfileClient.object(OBJECT_AUTHORIZER, config)
                     .putObject(fileStream, mimeType)
                     .nameAs(generatedFileName)
