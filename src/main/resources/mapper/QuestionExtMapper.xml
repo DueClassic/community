@@ -27,4 +27,23 @@
   <select id="selectRelated" parameterType="com.cc.community.model.Question" resultMap="BaseResultMap">
     SELECT * FROM QUESTION WHERE ID != #{id} AND tag regexp #{tag}
   </select>
+
+  <select id="countBySearch" parameterType="com.cc.community.dto.QuestionQueryDTO" resultType="java.lang.Integer">
+    SELECT count(*) FROM QUESTION
+    <where>
+      <if test="search != null">
+        AND title regexp #{search}
+      </if>
+    </where>
+  </select>
+
+  <select id="selectBySearch" parameterType="com.cc.community.dto.QuestionQueryDTO" resultMap="BaseResultMap">
+    SELECT * FROM QUESTION
+    <where>
+      <if test="search != null">
+        AND title regexp #{search}
+      </if>
+    </where>
+    ORDER BY GMT_CREATE DESC limit #{page},#{size}
+  </select>
 </mapper>

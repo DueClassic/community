@@ -2,6 +2,7 @@ package com.cc.community.service;
 
 import com.cc.community.dto.PageDTO;
 import com.cc.community.dto.QuestionDTO;
+import com.cc.community.dto.QuestionQueryDTO;
 import com.cc.community.exception.CustomizeErrorCode;
 import com.cc.community.exception.CustomizeException;
 import com.cc.community.mapper.QuestionExtMapper;
@@ -54,6 +55,49 @@ public class QuestionService {
         QuestionExample example = new QuestionExample();
         example.setOrderByClause("gmt_create desc");
         List<Question> questions=questionMapper.selectByExampleWithRowbounds(example,new RowBounds(offset,size));
+        List<QuestionDTO> questionDTOS=new ArrayList<>();
+        for(Question question:questions){
+            User user=userMapper.selectByPrimaryKey(question.getCreator());
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(question,questionDTO);
+            questionDTO.setUser(user);
+            questionDTOS.add(questionDTO);
+        }
+        pageDTO.setData(questionDTOS);
+        return pageDTO;
+    }
+
+    public PageDTO list(String search,Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)){
+            String regexTag=StringUtils.replaceChars(search,",","|");
+            search=StringUtils.replaceChars(regexTag,"，","|");
+        }
+
+        PageDTO pageDTO=new PageDTO();
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount=questionExtMapper.countBySearch(questionQueryDTO);
+        Integer totalPage;
+        if(totalCount%size==0){
+            totalPage=totalCount/size;
+        }
+        else{
+            totalPage=totalCount/size+1;
+        }
+        if(page<1){
+            page=1;
+        }
+        if(page>totalPage){
+            page=totalPage;
+        }
+        pageDTO.setPagination(totalPage,page);
+        //page:第几页  size：页内数量   offset:偏移量
+        Integer offset=size*(page-1);
+        QuestionExample example = new QuestionExample();
+        example.setOrderByClause("gmt_create desc");
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offset);
+        List<Question> questions=questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOS=new ArrayList<>();
         for(Question question:questions){
             User user=userMapper.selectByPrimaryKey(question.getCreator());
