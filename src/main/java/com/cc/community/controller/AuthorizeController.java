@@ -6,6 +6,7 @@ import com.cc.community.mapper.UserMapper;
 import com.cc.community.model.User;
 import com.cc.community.provider.GithubProvider;
 import com.cc.community.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ import java.util.UUID;
  * Created by xiaomi on 2019/12/1.
  */
 @Controller
+@Slf4j
 public class AuthorizeController {
     @Autowired
     private GithubProvider githubProvider;
@@ -58,6 +60,7 @@ public class AuthorizeController {
             //重定向
             return "redirect:/";
         }else{
+            log.error("callback get github error,{}",githubUser);
             //登录失败
             return "redirect:/";
         }

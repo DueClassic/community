@@ -1,5 +1,26 @@
 # 提问社区
 
+##部署
+
+- Git
+- JDK
+- Maven
+- MySql
+
+##步骤
+
+- yum update 
+- yum install
+- mkdir App
+- cd App
+- git clone https://github.com/DueClassic/community.git
+- yum install maven
+- mvn -v
+- mvn clean compile package
+- cp src/main/resources/application.properties src/main/resources/application-production.properties 
+- java -jar target/community-0.0.1-SNAPSHOT.jar --spring.profiles.active=production
+
+
 ## 资料
 [Spring 文档](https://spring.io/guides/)
 

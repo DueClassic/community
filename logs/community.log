@@ -31,3 +31,163 @@
 2019-12-10 20:57:52.408  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
 2019-12-10 20:57:52.409  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 1.045 seconds (JVM running for 51.265)
 2019-12-10 20:57:52.411  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:01:56.318  INFO 12848 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:01:56.320  INFO 12848 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-10 21:01:56.324  INFO 12848 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-10 21:01:56.906  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:01:56.907  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:01:57.116  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:01:57.149  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:01:57.150  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:01:57.151  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:01:57.175  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:01:57.176  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 267 ms
+2019-12-10 21:01:57.187  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-12-10 21:01:57.196  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-12-10 21:01:57.196  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:01:57.339  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:01:57.355  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:01:57.435  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:01:57.446  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:01:57.446  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.565 seconds (JVM running for 296.302)
+2019-12-10 21:01:57.448  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:02:02.121  INFO 12848 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:02:02.122  INFO 12848 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-12-10 21:02:02.125  INFO 12848 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-12-10 21:02:02.769  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:02:02.769  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:02:03.047  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:02:03.090  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:02:03.091  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:02:03.091  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:02:03.114  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:02:03.114  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 342 ms
+2019-12-10 21:02:03.129  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-12-10 21:02:03.137  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-12-10 21:02:03.138  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:02:03.265  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:02:03.277  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:02:03.353  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:02:03.363  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:02:03.363  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.626 seconds (JVM running for 302.219)
+2019-12-10 21:02:03.364  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:03:31.142  INFO 12848 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:31.146  INFO 12848 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-12-10 21:03:31.153  INFO 12848 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-12-10 21:03:32.029  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:03:32.029  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:03:32.457  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:03:32.549  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:03:32.552  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:03:32.552  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:03:32.630  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:03:32.630  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 597 ms
+2019-12-10 21:03:32.674  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-12-10 21:03:32.703  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-12-10 21:03:32.703  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:03:33.346  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:33.386  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:03:33.579  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:03:33.604  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:03:33.604  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 1.616 seconds (JVM running for 392.46)
+2019-12-10 21:03:33.605  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:03:44.832  INFO 12848 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:44.833  INFO 12848 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-12-10 21:03:44.842  INFO 12848 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-12-10 21:03:46.136  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:03:46.137  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:03:46.467  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:03:46.529  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:03:46.530  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:03:46.530  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:03:46.555  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:03:46.556  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 414 ms
+2019-12-10 21:03:46.573  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-12-10 21:03:46.587  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-12-10 21:03:46.588  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:03:46.877  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:46.927  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:03:47.082  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:03:47.105  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:03:47.106  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 1.017 seconds (JVM running for 405.962)
+2019-12-10 21:03:47.108  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:03:50.806  INFO 12848 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:50.807  INFO 12848 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-12-10 21:03:50.812  INFO 12848 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-12-10 21:03:51.796  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:03:51.797  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:03:52.237  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:03:52.288  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:03:52.289  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:03:52.289  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:03:52.311  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:03:52.312  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 511 ms
+2019-12-10 21:03:52.332  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-12-10 21:03:52.344  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-12-10 21:03:52.344  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:03:52.551  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:52.592  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:03:52.722  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:03:52.737  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:03:52.738  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.981 seconds (JVM running for 411.594)
+2019-12-10 21:03:52.739  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:03:57.435  INFO 12848 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:57.436  INFO 12848 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-12-10 21:03:57.441  INFO 12848 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-12-10 21:03:58.148  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:03:58.148  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:03:58.424  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:03:58.468  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:03:58.469  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:03:58.469  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:03:58.488  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:03:58.488  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 336 ms
+2019-12-10 21:03:58.502  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-12-10 21:03:58.513  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-12-10 21:03:58.514  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:03:58.649  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:03:58.666  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:03:58.773  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:03:58.784  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:03:58.785  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.666 seconds (JVM running for 417.64)
+2019-12-10 21:03:58.786  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:04:01.394  INFO 12848 --- [Thread-46] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:04:01.395  INFO 12848 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-12-10 21:04:01.398  INFO 12848 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2019-12-10 21:04:02.188  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:04:02.189  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:04:02.445  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:04:02.504  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:04:02.505  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:04:02.505  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:04:02.530  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:04:02.530  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 338 ms
+2019-12-10 21:04:02.547  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2019-12-10 21:04:02.557  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2019-12-10 21:04:02.558  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:04:02.748  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:04:02.767  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:04:02.893  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:04:02.908  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:04:02.909  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.743 seconds (JVM running for 421.765)
+2019-12-10 21:04:02.911  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-10 21:04:09.798  INFO 12848 --- [Thread-52] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:04:09.798  INFO 12848 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2019-12-10 21:04:09.801  INFO 12848 --- [Thread-52] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2019-12-10 21:04:10.856  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Starting CommunityApplication on DESKTOP-2LVO1NJ with PID 12848 (started by xiaomi in F:\GitHub项目\halo\community)
+2019-12-10 21:04:10.857  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2019-12-10 21:04:11.119  WARN 12848 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2019-12-10 21:04:11.166  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-10 21:04:11.166  INFO 12848 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-10 21:04:11.166  INFO 12848 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-10 21:04:11.186  INFO 12848 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-10 21:04:11.186  INFO 12848 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 327 ms
+2019-12-10 21:04:11.198  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2019-12-10 21:04:11.207  INFO 12848 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2019-12-10 21:04:11.207  INFO 12848 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2019-12-10 21:04:11.329  INFO 12848 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-10 21:04:11.343  INFO 12848 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-10 21:04:11.433  INFO 12848 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-10 21:04:11.445  INFO 12848 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-10 21:04:11.446  INFO 12848 --- [restartedMain] com.cc.community.CommunityApplication    : Started CommunityApplication in 0.624 seconds (JVM running for 430.302)
+2019-12-10 21:04:11.447  INFO 12848 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
