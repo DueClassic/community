@@ -5,5 +5,8 @@ CREATE TABLE notification
     receiver BIGINT NOT NULL,
     type INT NOT NULL,
     gmt_create BIGINT NOT NULL,
-    status INT DEFAULT 0 NOT NULL
+    status INT DEFAULT 0 NOT NULL,
+    Outerid BIGINT NOT NULL ,
+    NOTIFIER_NAME VARCHAR(100) NOT NULL,
+    OUTER_TITLE VARCHAR(256) NOT NULL
 );

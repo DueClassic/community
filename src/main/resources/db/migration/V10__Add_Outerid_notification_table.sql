@@ -1,1 +1,0 @@
-ALTER TABLE NOTIfication ADD Outerid BIGINT NOT NULL ;
