@@ -16,7 +16,7 @@
 - git clone https://github.com/DueClassic/community.git
 - yum install maven
 - mvn -v
-- mvn clean compile package
+- mvn compile package
 - cp src/main/resources/application.properties src/main/resources/application-production.properties 
 - java -jar target/community-0.0.1-SNAPSHOT.jar --spring.profiles.active=production
 
