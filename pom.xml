@@ -111,9 +111,9 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.2.4</version>
 				<configuration>
-					<url>jdbc:mysql://106.75.61.189:3306/community</url>
+					<url>jdbc:mysql://cdb-4tmpvvrh.gz.tencentcdb.com:10063/community</url>
 					<user>root</user>
-					<password>123456</password>
+					<password>cc1999chen</password>
 				</configuration>
 				<dependencies>
 					<dependency>
