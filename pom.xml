@@ -111,11 +111,16 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>5.2.4</version>
 				<configuration>
-					<url>jdbc:h2:~/community</url>
+					<url>jdbc:mysql://106.75.61.189:3306/community</url>
 					<user>root</user>
-					<password>990812</password>
+					<password>123456</password>
 				</configuration>
 				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>8.0.18</version>
+					</dependency>
 					<dependency>
 						<groupId>com.h2database</groupId>
 						<artifactId>h2</artifactId>
