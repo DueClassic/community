@@ -92,7 +92,7 @@ public class QuestionService {
         }
         pageDTO.setPagination(totalPage,page);
         //page:第几页  size：页内数量   offset:偏移量
-        Integer offset=size*(page-1);
+        Integer offset=page<1?0:size*(page-1);
         QuestionExample example = new QuestionExample();
         example.setOrderByClause("gmt_create desc");
         questionQueryDTO.setSize(size);
