@@ -1,13 +1,13 @@
 # 提问社区
 
-##部署
+## 部署
 
 - Git
 - JDK
 - Maven
 - MySql
 
-##步骤
+## 步骤
 
 - yum update 
 - yum install
@@ -54,14 +54,10 @@ CREATE TABLE USER
     GMT_CREATE bigint,
     GMT_MODIFIED bigint
 );
-```
-<<<<<<< HEAD
 
-=======
 ```bash
 #更新数据库
 mvn flyway:migrate
 #mybatis Generator自动生成
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
->>>>>>> 0f68ef30eb017018c68f0f42a88530e25a076d3e
