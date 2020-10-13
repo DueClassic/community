@@ -54,6 +54,7 @@ CREATE TABLE USER
     GMT_CREATE bigint,
     GMT_MODIFIED bigint
 );
+```
 
 ```bash
 #更新数据库
